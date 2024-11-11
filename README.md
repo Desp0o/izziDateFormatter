@@ -56,7 +56,7 @@ Whether you need standard date formats or customized layouts, this package offer
 
 ## 📖 Usage
 you just need to do: 
-- 📌 Current date format: Specify the format of the date you currently have
+- 📌 Current date: Enter the date you currently have
 - 🚀 Target date format: Specify the format you want to convert the date to.
 - 🎨 Format options: You can select a format from the ```DateFormats``` enum or provide your own custom format string.
 
@@ -72,13 +72,13 @@ final class Foo {
     }
 
     private func dateFormatted() {
-        let date = izziDateFormatter.formatDate(currentDate: "yyyy-MM-dd'T'HH:mm:ssZ", format: DateFormats.EEEE_dd_MM_yyyy.rawValue)
+        let date = izziDateFormatter.formatDate(currentDate: "2024-10-22T11:33:59Z", format: DateFormats.EEEE_dd_MM_yyyy.rawValue)
     }
 
     /////// or use your format ///////
 
     private func dateFormatted() {
-        let date = izziDateFormatter.formatDate(currentDate: "yyyy-MM-dd'T'HH:mm:ssZ", format: "EEEE MM")
+        let date = izziDateFormatter.formatDate(currentDate: "2024-10-22T11:33:59Z", format: "EEEE MM")
     }
 
 }
