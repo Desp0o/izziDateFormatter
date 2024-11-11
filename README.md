@@ -85,7 +85,7 @@ final class Foo {
 
 ```
 
-![Static Badge](https://img.shields.io/badge/Platforms-iOS_%7C_macOS-red) ![Static Badge](https://img.shields.io/badge/Platforms-6.0-red) 
+![Static Badge](https://img.shields.io/badge/Platforms-iOS_%7C_macOS-red) ![Static Badge](https://img.shields.io/badge/Swift-6.0-red)
 
 ![Static Badge](https://img.shields.io/badge/Version-1.0.0-green)
 
