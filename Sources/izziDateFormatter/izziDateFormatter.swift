@@ -7,6 +7,7 @@ public enum DateFormats: String {
     case MMM = "MMM"
     case MMMM = "MMMM"
     case DD = "dd"
+    case D = "d"
     case EEE = "EEE"
     case EEEE = "EEEE"
     case EEEE_MMMM = "EEEE MMMM"
@@ -62,14 +63,13 @@ public final class IzziDateFormatter: IzziDateFormatterProtocol {
     public init() { }
     
     public func formatDate(currentFormat: String, currentDate: String, format: String) -> String {
-        let inputFormatter = DateFormatter()
-        inputFormatter.dateFormat = currentFormat
+        let formatter = DateFormatter()
+        formatter.dateFormat = currentFormat
         
-        guard let date = inputFormatter.date(from: currentDate) else { return String()}
+        guard let date = formatter.date(from: currentDate) else { return String()}
         
-        let outputFormatter = DateFormatter()
-        outputFormatter.dateFormat = format
+        formatter.dateFormat = format
         
-        return outputFormatter.string(from: date)
+        return formatter.string(from: date)
     }
 }
