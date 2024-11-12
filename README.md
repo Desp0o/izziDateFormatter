@@ -63,25 +63,24 @@ you just need to do:
 - 🎨 Format options: You can select a format from the ```DateFormats``` enum or provide your own custom format string.
 
 
-```javascript
-import izziDateFormatter
+```swift
+final class Foo {
+    let izziDateFormatter: IzziDateFormatterProtocol
 
-final class Foo: IzziDateFormatterProtocol{
-
-    static func formatDate(currentDate: String, format: String) -> String {
-        IzziDateFormatter.formatDate(currentDate: currentDate, format: format)
+    init(izziDateFormatter: IzziDateFormatterProtocol = IzziDateFormatter()) {
+        self.izziDateFormatter = izziDateFormatter
     }
 
-    func formatMyData() {
-        let currentDate = Foo.formatDate(currentFormat: "yyyy-MM-dd'T'HH:mm:ssZ", currentDate: "2024-10-22T11:33:59Z", format: DateFormats.EEEE_dd_MM_yyyy.rawValue)
+    private func formatMyData() {
+        let date = izziDateFormatter.formatDate(currentFormat: "yyyy-MM-dd'T'HH:mm:ssZ", currentDate: "2024-10-22T11:33:59Z", format: DateFormats.EEEE_dd_MM_yyyy.rawValue)
     }
 
     /////// or use your format ///////
 
-    func formatMyData() {
-        let currentDate =  Foo.formatDate(currentFormat: "yyyy-MM-dd", currentDate: "2024-10-22", format: "yyyy")
+    private func formatMyData() {
+        let currentDate =  izziDateFormatter.formatDate(currentFormat: "yyyy-MM-dd", currentDate: "2024-10-22", format: "yyyy")
     }
-        
+
 }
 ```
 
