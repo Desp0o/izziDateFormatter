@@ -54,16 +54,16 @@ public enum DateFormats: String {
 }
 
 public protocol IzziDateFormatterProtocol {
-    func formatDate(currentDate: String, format: String) -> String
+    func formatDate(currentFormat: String, currentDate: String, format: String) -> String
 }
 
 public final class IzziDateFormatter: IzziDateFormatterProtocol {
     
     public init() { }
     
-    public func formatDate(currentDate: String, format: String) -> String {
+    public func formatDate(currentFormat: String, currentDate: String, format: String) -> String {
         let inputFormatter = DateFormatter()
-        inputFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+        inputFormatter.dateFormat = currentFormat
         
         guard let date = inputFormatter.date(from: currentDate) else { return String()}
         
