@@ -11,6 +11,7 @@ Whether you need standard date formats or customized layouts, this package offer
 | :---------------------------- | :----------------------------- | :------------------------- |
 | MMM                           | MMM                            | Jan                        |
 | MMMM                          | MMMM                           | August                     |
+| D                            | d                             | 8                         |
 | DD                            | dd                             | 08                         |
 | EEE                           | EEE                            | Mon                        |
 | EEEE                          | EEEE                           | Monday                     |
