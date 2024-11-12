@@ -54,7 +54,7 @@ Whether you need standard date formats or customized layouts, this package offer
 | yyyy_MM_dd_HH_mm              | yyyy-MM-dd HH:mm              | 2024-08-08 13:45           |
 
 
-📖 Usage
+## 📖 Usage
 
 you just need to do: 
 - 🎨 Current date format: Enter the date format you currently have
