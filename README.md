@@ -58,8 +58,7 @@ Whether you need standard date formats or customized layouts, this package offer
 ## 📖 Usage
 
 you just need to do: 
-- 🎨 Current date format: Enter the date format you currently have
-- 📌 Current date: Enter the date you currently have
+- 📌 Current date: Enter the isoDate 
 - 🚀 Target date format: Specify the format you want to convert the date to.
 - 🎨 Format options: You can select a format from the ```DateFormats``` enum or provide your own custom format string.
 
@@ -73,19 +72,26 @@ final class Foo {
     }
 
     private func formatMyData() {
-        let date = izziDateFormatter.formatDate(currentFormat: "yyyy-MM-dd'T'HH:mm:ssZ", currentDate: "2024-10-22T11:33:59Z", format: DateFormats.EEEE_dd_MM_yyyy.rawValue)
+            let date = timeFormatter(
+            currentDate: questionModel.createDate,
+            finalFormat: DateFormats.EEEE_dd_MM_yyyy.rawValue,
+            timeZoneOffset: 4
+        )
     }
 
     /////// or use your format ///////
 
     private func formatMyData() {
-        let currentDate =  izziDateFormatter.formatDate(currentFormat: "yyyy-MM-dd", currentDate: "2024-10-22", format: "yyyy")
+            let date = timeFormatter(
+            currentDate: questionModel.createDate,
+            finalFormat: "dd/MM/yyyy",
+            timeZoneOffset: 4
+        )
     }
-
 }
 ```
 
-![Static Badge](https://img.shields.io/badge/version-1.2.1-green) ![Static Badge](https://img.shields.io/badge/License-MIT-green)
+![Static Badge](https://img.shields.io/badge/version-1.3.0-green) ![Static Badge](https://img.shields.io/badge/License-MIT-green)
 
 
 ![Static Badge](https://img.shields.io/badge/Swift-6.0_%7C_5.10_%7C_5.9_%7C_5.8_-orange) ![Static Badge](https://img.shields.io/badge/platforms-iOS_%7C_macOS_-orange)
