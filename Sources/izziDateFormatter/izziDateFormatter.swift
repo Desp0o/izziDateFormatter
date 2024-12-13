@@ -67,7 +67,7 @@ public final class IzziDateFormatter: IzziDateFormatterProtocol {
         var finalDate = ""
         
         let inputFormatter = ISO8601DateFormatter()
-        inputFormatter.formatOptions = [.withFractionalSeconds, .withInternetDateTime]
+        inputFormatter.formatOptions = [.withFractionalSeconds, .withInternetDateTime, .withInternetDateTime]
 
         if let date = inputFormatter.date(from: isoDate) {
         
