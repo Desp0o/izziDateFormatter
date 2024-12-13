@@ -94,7 +94,7 @@ final class Foo {
 }
 ```
 
-![Static Badge](https://img.shields.io/badge/version-1.3.0-green) ![Static Badge](https://img.shields.io/badge/License-MIT-green)
+![Static Badge](https://img.shields.io/badge/version-1.4.0-green) ![Static Badge](https://img.shields.io/badge/License-MIT-green)
 
 
 ![Static Badge](https://img.shields.io/badge/Swift-6.0_%7C_5.10_%7C_5.9_%7C_5.8_-orange) ![Static Badge](https://img.shields.io/badge/platforms-iOS_%7C_macOS_-orange)
