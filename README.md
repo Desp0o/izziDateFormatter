@@ -61,6 +61,7 @@ you just need to do:
 - 📌 Current date: Enter the isoDate 
 - 🚀 Target date format: Specify the format you want to convert the date to.
 - 🎨 Format options: You can select a format from the ```DateFormats``` enum or provide your own custom format string.
+- 🌍 Localization: Specify the localeIdentifier to format the date for a specific language and region (Default: en_US)
 
 
 ```swift
@@ -75,7 +76,8 @@ final class Foo {
             let date = timeFormatter(
             currentDate: questionModel.createDate,
             finalFormat: DateFormats.EEEE_dd_MM_yyyy.rawValue,
-            timeZoneOffset: 4
+            timeZoneOffset: 4,
+            localeIdentifier: "es_ES"
         )
     }
 
@@ -85,7 +87,8 @@ final class Foo {
             let date = timeFormatter(
             currentDate: questionModel.createDate,
             finalFormat: "dd/MM/yyyy",
-            timeZoneOffset: 4
+            timeZoneOffset: 4,
+            localeIdentifier: "ka_GE"
         )
     }
 }
