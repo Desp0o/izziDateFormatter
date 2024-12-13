@@ -55,14 +55,14 @@ public enum DateFormats: String {
 }
 
 public protocol IzziDateFormatterProtocol {
-    func isoTimeFormatter(currentDate: String, finalFormat: String, timeZoneOffset: Int) -> String
+    func isoTimeFormatter(currentDate: String, finalFormat: String, timeZoneOffset: Int, localeIdentifier: String) -> String
 }
 
 public final class IzziDateFormatter: IzziDateFormatterProtocol {
     
     public init() { }
     
-    public func isoTimeFormatter(currentDate: String, finalFormat: String, timeZoneOffset: Int) -> String {
+    public func isoTimeFormatter(currentDate: String, finalFormat: String, timeZoneOffset: Int, localeIdentifier: String = "en_US") -> String {
         let isoDate = currentDate
         var finalDate = ""
         
@@ -74,6 +74,7 @@ public final class IzziDateFormatter: IzziDateFormatterProtocol {
             let outputFormatter = DateFormatter()
             outputFormatter.dateFormat = finalFormat
             outputFormatter.timeZone = TimeZone(secondsFromGMT: timeZoneOffset * 3600)
+            outputFormatter.locale = Locale(identifier: localeIdentifier)
 
             let formattedDate = outputFormatter.string(from: date)
             print(formattedDate)
