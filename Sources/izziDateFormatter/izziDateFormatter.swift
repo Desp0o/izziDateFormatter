@@ -77,7 +77,6 @@ public final class IzziDateFormatter: IzziDateFormatterProtocol {
             outputFormatter.locale = Locale(identifier: localeIdentifier)
 
             let formattedDate = outputFormatter.string(from: date)
-            print(formattedDate)
             finalDate = formattedDate
 
         } else {
